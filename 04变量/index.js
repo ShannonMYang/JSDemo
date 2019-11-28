@@ -1,7 +1,7 @@
 /*
  * @Author: Shannon Yang
  * @Date: 2019-11-28 15:07:24
- * @LastEditTime: 2019-11-28 16:22:19
+ * @LastEditTime: 2019-11-28 16:44:16
  * @LastEditors: Please set LastEditors
  * @Description: 变量和常量
  * @FilePath: \JSDemo\04变量\index.js
@@ -120,3 +120,19 @@ alert(color); // #FF7F00
 // const pageLoadTime = /* 网页加载所需的时间 */;
 // pageLoadTime 的值在页面加载之前是未知的，所以采用常规命名。但是它仍然是个常量，因为赋值之后不会改变。
 // 换句话说，大写命名的常量仅用作 “硬编码（hard-coded）” 值的别名。
+
+/*
+ * 声明变量之前，多花点时间思考它的更好的命名。你会受益良多。
+ * 
+ * 一些可以遵循的规则：
+ *
+ * 使用易读的命名，比如 userName 或者 shoppingCart。
+ * 
+ * 离诸如 a、b、c 这种缩写和短名称远一点，除非你真的知道你在干什么。
+ * 
+ * 变量名在能够准确描述变量的同时要足够简洁。不好的例子就是 data 和 value，这样的名称等于什么都没说。
+ * 如果能够非常明显地从上下文知道数据和值所表达的含义，这样使用它们也是可以的。
+ * 
+ * 脑海中的术语要和团队保持一致。
+ * 如果站点的访客称为 “用户”，则我们采用相关的变量命名，比如 currentUser 或者 newUser，而不要使用 currentVisitor 或者一个 newManInTown。
+ */
