@@ -1,0 +1,49 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-26 16:06:57
+ * @LastEditTime: 2020-04-26 16:59:31
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \JSDemo\day5.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let numbers = [0, 5, 3, 6, 2];
+        // let e = numbers.findIndex(function (e, index, arr) {
+        //     return e > 5;
+        // });
+        // console.log(e);
+
+
+        let names = ['suyan', '前端小课'];
+        names.length = 0;
+        console.log(names[0]);
+
+
+        var numbers = [];
+        for (var i = 0; i < 4; i++) {
+            // console.log("-----" + i);
+            numbers.push(function () {
+                // console.log(i);
+                return i;
+            });
+        }
+        console.log(numbers)
+        var result = numbers.map(function (e) {
+            console.log(e);
+            return e();
+        });
+        console.log(result);
+    </script>
+</body>
+
+</html>
