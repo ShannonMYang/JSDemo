@@ -1,0 +1,40 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-05-09 15:28:49
+ * @LastEditTime: 2020-05-09 15:33:38
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \JSDemo\day6.html
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day6</title>
+</head>
+
+<body>
+    <script>
+        let names = ['suyan', '前端小课'];
+        names.length = 0;
+        console.log(names[0]); // 它的值是？
+
+        var numbers = [];
+        for (var i = 0; i < 4; i++) {
+            numbers.push(function () {
+                return i;
+            });
+        }
+        console.log(numbers)
+        var result = numbers.map(function (e) {
+            console.log(e)
+            return e();
+        });
+        console.log(result); // 值是什么？
+    </script>
+</body>
+
+</html>
