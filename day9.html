@@ -1,0 +1,94 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-02 15:51:19
+ * @LastEditTime: 2020-06-10 11:14:05
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \JSDemo\day9.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day9</title>
+</head>
+
+<body>
+    <script>
+        function call() {
+            var name = 'suyan';
+            var age = 20;
+            console.log(name + ' age is ' + age);
+            return {
+                getAge: function () {
+                    return age;
+                },
+                setAge: function (newValue) {
+                    age = newValue;
+                }
+            };
+        }
+        const ageObj = call();
+        console.log(ageObj.getAge()); // 20
+        // 修改 age 的值为 30
+        ageObj.setAge(30);
+        console.log(ageObj.getAge()); // 30
+
+
+        function createCounter() {
+            let counter = 0;
+            const myFunction = function () {
+                counter = counter + 1;
+                return counter;
+            };
+            return myFunction;
+        }
+        // increment 是一个函数
+        const increment = createCounter();
+        const c1 = increment();
+        const c2 = increment();
+        const c3 = increment();
+        console.log(c1, c2, c3); // 1,2,3
+
+        const increment2 = createCounter();
+        const c11 = increment2();
+        console.log(c11);
+
+
+        (function () {
+            var numbers = [];
+            for (let i = 0; i < 4; i++) {
+                numbers.push(function () {
+                    return i;
+                });
+            }
+            var result = numbers.map(function (e) {
+                return e();
+            });
+            console.log(result); // 值是什么？
+        })();
+
+
+        var from = 'WuHan';
+        var obj = {
+            from: 'BeiJing',
+            logFrom: function () {
+                console.log(this.from);
+            }
+        };
+        let logFrom = obj.logFrom;
+        logFrom();
+        obj.logFrom();
+
+        let m_number = 2681.15+5314.10+5305.10+6058.93+4469.03+4469.03+4469.03+
+        6934.10+5288.49+9414.20+9414.20+10294.20+10294.20+10294.20+9761.40+9761.40+9761.40+9761.40+9761.40+
+        9761.40+9761.40+9700+9761.40+9761.40+9761.40+9682.32+9601.40+9601.40+10099.70+8361.77+
+        9851.43+10315.01+7760+10315.01+10305.31+10187.62+10423.00+10305.31+10315.31+10305.31+10096.42+10030.70+9822.15+
+        10305.31+10305.31+10305.31+10305.31+10305.31+10305.31
+        console.log(m_number)
+    </script>
+</body>
+
+</html>
