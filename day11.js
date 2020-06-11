@@ -1,12 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2020-06-11 10:18:37
- * @LastEditTime: 2020-06-11 11:00:29
+ * @LastEditTime: 2020-06-11 11:03:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \JSDemo\day11.js
  */ 
-
+/*....................................................*/
 /*
  * 只负责创建单一实例，保证创建的唯一;
  * 符合设计模式的单一职责原则;
