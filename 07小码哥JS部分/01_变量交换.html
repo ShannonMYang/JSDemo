@@ -1,0 +1,39 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-11 14:40:28
+ * @LastEditTime: 2020-06-12 16:33:27
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \JSDemo\07小码哥JS部分\01.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 不使用中间变量，实现变量数值的交换；
+        // 此方法，仅适用于数字的情况；
+        var num1 = 100
+        var num2 = 200
+        console.log(num1, num2)
+        num1 = num1 + num2  // 300
+        num2 = num1 - num2  // 300 - 200 = 100
+        num1 = num1 - num2  // 300 - 100 = 200
+        console.log(num1, num2)
+        // ................................................
+        // 通用情况
+        var temp
+        var app1 = '黑App'
+        var app2 = '白App'
+        temp = app1
+        app1 = app2
+        app2 = temp
+        console.log(app1)
+        console.log(app2)
+    </script>
+</body>
+</html>

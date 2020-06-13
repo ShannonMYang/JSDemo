@@ -1,0 +1,52 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-12 16:41:29
+ * @LastEditTime: 2020-06-12 16:56:50
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \JSDemo\07小码哥JS部分\04_数字型number.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_数字型number</title>
+</head>
+<body>
+    <script>
+        /* 
+         * 1.八进制 
+         * 0~7 数字前面加0，表示八进制
+         * 0o 表示八进制
+         */
+        var num1 = 010
+        // 0o10 八进制，转十进制，就是8
+        var num2 = 0o10
+        console.log(num1, num2)
+        var num3 = 012
+        console.log(num3)
+        // ...............................................
+        /*
+         * 2.十六进制
+         * 0~9 a~f
+         * 0x 表示十六进制
+         */
+        var num4 = 0x9
+        console.log(num4)
+        var num5 = 0xa
+        console.log(num5)
+        // ...............................................
+        // 3.数字型的最大值
+        console.log(Number.MAX_VALUE) // 1.7976931348623157e+308
+        // 4.数字型的最小值
+        console.log(Number.MIN_VALUE) // 5e-324
+        // 5.无穷大
+        console.log(Number.MAX_VALUE * 2) // Infinity
+        // 6.无穷小
+        console.log(-Number.MAX_VALUE * 2) // -Infinity
+        // 7.非数字
+        console.log('king' - 1) // NaN
+    </script>
+</body>
+</html>
