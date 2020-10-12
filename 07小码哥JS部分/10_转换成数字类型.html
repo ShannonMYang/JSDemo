@@ -1,0 +1,37 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-15 13:50:04
+ * @LastEditTime: 2020-06-15 14:10:34
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \JSDemo\07小码哥JS部分\10_转换成数字类型.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.parseInt(变量) 可以把 字符型 转换为 数字型 得到是整数
+        console.log(parseInt('3.14')) // 取整 3
+        console.log(parseInt('3.1415926')) // 取整 3
+        console.log(parseInt('300px')) // 取整 300 去掉单位px
+        console.log(parseInt('rem300px')) // NaN
+        // 2.parseFloat(变量) 可以把 字符型 转换为 数字型 得到是小数 浮点数
+        console.log(parseFloat('3.14')) // 3.14
+        console.log(parseFloat('300.121px')) // 300.121 去掉单位px
+        console.log(parseFloat('rem300px')) // NaN
+        // 3.利用 Number(变量)
+        var str = '123'
+        console.log(Number(str)) // 123
+        console.log(Number('123123')) // 123123
+        // 4.利用算术运算 的 加减乘除 隐式转换
+        console.log('121' - 0) // 121
+        console.log('123' - '121') // 2
+        console.log('123' * 2) // 246
+    </script>
+</body>
+</html>
