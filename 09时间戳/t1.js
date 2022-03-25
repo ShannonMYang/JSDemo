@@ -48,12 +48,57 @@
     // 将格林尼治时间换算成秒
     let temp = Date.parse(datestring);
     // 格式化时间
-    let result = this.formatDate(temp);
+    let result = formatDate(temp);
     let lastDateTime = result.slice(0, 16);
-    this.setState({
-      selectDateTime: lastDateTime,
-      selectBasicTime: datestring
-    })
+    return lastDateTime;
   }
 
-console.log(getNowFormatDate())
+// console.log(getNowFormatDate().slice(0, 10))
+// 当天日期
+let todayString = getNowFormatDate().slice(0, 10);
+// 当日零点
+let beginTodayString = todayString + ' ' + '23:30:00';
+console.log(beginTodayString);
+
+// 格式化为秒
+let temp = Date.parse(beginTodayString);
+console.log(temp);
+console.log(formatDate(temp));
+
+// 一天的时间戳 number 数据
+let oneDayTotalSeconds = 24 * 60 * 60 * 1000;
+let nextDaySeconds = temp + oneDayTotalSeconds;
+console.log(nextDaySeconds);
+// 次日日期时间
+let nextDayString = formatDate(nextDaySeconds);
+console.log(nextDayString);
+
+// 当天日期
+let nextDayBarString = nextDayString.slice(0, 10);
+// 当日零点
+let nextDayNeedString = nextDayBarString + ' ' + '02:00:00';
+console.log(nextDayNeedString);
+let endDateString = Date.parse(nextDayNeedString);
+
+// 当前时间转化为时间戳
+let num1 = getNowFormatDate();
+let num2 = Date.parse('2022-03-25 22:59:00');
+console.log(num2);
+// 开始时间转化为时间戳 即 temp
+// 结束时间转化为时间戳 即 nextDaySeconds
+if (num2 > temp && num2 < nextDaySeconds) {
+  console.log('当前在结算时间段内');
+} else {
+  console.log('当前在可充值时间段内');
+}
+
+
+
+/**
+ * 
+ * @param {*} date 需要截取的时间字符串
+ * @returns 返回时间字符串
+ */
+const timeFromDate = date => date.toTimeString().slice(0, 9);
+console.log(timeFromDate(new Date()));
+console.log(new Date());
